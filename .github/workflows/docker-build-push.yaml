@@ -36,5 +36,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ steps.login-ecr.outputs.registry }}/tk-flask-private-repository:latest
-            ${{ steps.login-ecr.outputs.registry }}/tk-flask-private-repository:${{ github.sha }}
+            ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPO }}:latest
+            ${{ steps.login-ecr.outputs.registry }}/${{ vars.ECR_REPO }}:${{ github.sha }}
