@@ -36,5 +36,5 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ${{ steps.ecr.outputs.registry }}/flask-app:latest
-            ${{ steps.ecr.outputs.registry }}/flask-app:${{ github.sha }}
+            ${{ steps.ecr.outputs.registry }}/${{ vars.ECR_REPO }}/flask-app:latest
+            ${{ steps.ecr.outputs.registry }}/${{ vars.ECR_REPO }}/flask-app:${{ github.sha }}
